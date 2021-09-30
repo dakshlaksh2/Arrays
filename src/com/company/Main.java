@@ -86,6 +86,8 @@ public class Main {
 
         System.out.println(Arrays.deepToString(threeD));
 
+        System.out.println("Changes");
+
 
     }
 }
