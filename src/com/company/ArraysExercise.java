@@ -26,8 +26,8 @@ public class ArraysExercise {
         the array and assign the value of the loop control variable (e.g., i) to the corresponding
         index in the array.*/
         int[] intArray =new int[5];
-        for(int i=0; i<intArray.length; i++){
-            intArray[i] = i;
+        for(int i=0; i<intArray.length; ++i){
+            intArray[i] = i+1;
             System.out.print(intArray[i]+" ");
         }
         /*Write a program where you create an integer array of 5 numbers. Loop through
@@ -36,18 +36,45 @@ public class ArraysExercise {
         System.out.println();
         int[] intArray2 =new int[5];
         for(int i=0; i<intArray2.length; i++){
-            intArray2[i] = (2*i);
+            intArray2[i] = (2*(i+1));
             System.out.print(intArray2[i]+" ");
         }
+        System.out.println();
+        /*Write a program where you create an array of 5 elements. Loop through the array and print
+        the value of each element, except for the middle (index 2) element.*/
+            int[] skipArray = {1, 2, 3, 4, 5,6};
+        //System.out.println(Arrays.toString(skipArray));
+        for(int index=0; index<skipArray.length;index++) {
+
+            if (index == skipArray.length/2) {
+                continue;
+            }
+            System.out.print( "    " +skipArray[index]);
+            System.out.print(" ");
+        }
+        System.out.println();
+
         /*Write a program that creates a String array of 5 elements and swaps the first element with the
     middle element without creating a new array.*/
         String[] stringArray1={"Red","Blue","Green","yellow","Orange"};
-        stringArray1[0] = stringArray1[2];
-        stringArray1[2] = stringArray1[0];
-        System.out.println(Arrays.toString(stringArray1));
+       String x =stringArray1[0];
+        stringArray1[0] = stringArray1[stringArray1.length/2];
+        stringArray1[stringArray1.length/2]= x;
+        System.out.println("New array after swapping :" + Arrays.toString(stringArray1));
+      /*  //Reversing an array
+        for(int i=0;i<stringArray1.length;i++){
+            System.out.print(stringArray1[i]+" ");
+        }
+        System.out.println();
+        for(int i=stringArray1.length-1;i>=0;i--){
+            System.out.print(stringArray1[i]+" ");
+        }*/
+
+       // System.out.println(Arrays.toString(stringArray1));
         /*Write a program to sort the following int array in ascending order: {4, 2, 9, 13, 1, 0}.
         Print the array in ascending order, print the smallest and the largest element of the array.
         The output will look like the following:*/
+        System.out.println();
         int[] intArray3 ={4, 2, 9, 13, 1, 0};
         Arrays.sort(intArray3);
         System.out.println("Ascending order array: "+Arrays.toString(intArray3));
